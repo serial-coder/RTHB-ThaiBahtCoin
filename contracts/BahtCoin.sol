@@ -72,6 +72,20 @@ contract BahtCoin is Owned {
         currentRate = _currentRate;
     }
 
+    function getGlobalStatus() public view returns (
+        uint256 _contractLength,
+        uint256 _thresholdRate,
+        uint256 _collateralRate,
+        uint256 _currentRate
+    ) {
+        return (
+            contracts.length,
+            thresholdRate,
+            collateralRate,
+            currentRate
+        );
+    }
+
     function setCollateralRate(uint256 _collateralRate) public onlyOwner {
         collateralRate = _collateralRate;
     }
