@@ -59,6 +59,8 @@ contract BahtCoin is Owned {
     uint256 public thresholdRate;
     uint256 public currentRate;
 
+    event Transfer(address indexed from, address indexed to, uint tokens);
+
     constructor(
         uint256 _collateralRate, 
         uint256 _thresholdRate, 
@@ -159,6 +161,14 @@ contract BahtCoin is Owned {
 
         // Transfer RBTC to the invoker
         msg.sender.transfer(targetContract.RBTC);
+    }
+
+    // Transfer the RTHB balance from owner's account to another account
+    function transfer(address to, uint tokens) public returns (bool success) {
+        balances[msg.sender] = balances[msg.sender].sub(tokens);
+        balances[to] = balances[to].add(tokens);
+        emit Transfer(msg.sender, to, tokens);
+        return true;
     }
 
     function balanceOf(address tokenOwner) 
