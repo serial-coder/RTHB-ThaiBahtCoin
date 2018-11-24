@@ -1,3 +1,9 @@
+/*
+* Copyright (c) 2018, Phuwanai Thummavet (serial-coder). All rights reserved.
+* Github: https://github.com/serial-coder
+* Contact us: mr[dot]thummavet[at]gmail[dot]com
+*/
+
 pragma solidity ^0.4.24;
 
 import "openzeppelin-solidity/contracts/math/SafeMath.sol";
