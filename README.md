@@ -1,6 +1,6 @@
 <p align="center"><a href="#" target="_blank" rel="noopener noreferrer"><img width="500" src="images/RTHB-icon.png"></a></p>
 
-# Thai Baht Coin, Backed by BTC
+# Thai Baht Coin backed by BTC
 This project is the proof of concept for securely issuing Thai Baht Stable Coin named RTHB, which is backed by Bitcoin (BTC).
 
 ## Introduction
