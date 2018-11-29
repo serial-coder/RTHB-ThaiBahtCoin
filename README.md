@@ -22,3 +22,5 @@ We create RTHB, which's ERC20-Compatible token, and features following below.
 
 ### Scenario 3 - Pirce is decrease
 
+## To-do
+- Implemet some missing ERC20 functionns.
