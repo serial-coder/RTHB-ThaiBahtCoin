@@ -15,4 +15,10 @@ We create RTHB, which's ERC20-Compatible token, and features following below.
 3. The owner of contract in (1) can get back their RBTC by return full amount of RTHB in that contract (calling **claim()**).
 4. When RBTC price drop and conntracts that have RBTC backed below 130%, these contracts're forced sale and anyone can call to **publicTakeover()** without contract ownership.
 
+## Example of issuinng RTHB
+### Scenario 1 - Pirce is stable
+
+### Scenario 2 - Pirce is incrase
+
+### Scenario 3 - Pirce is decrease
 
