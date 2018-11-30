@@ -135,6 +135,8 @@ contract BahtCoin is Owned {
         require(targetContract.owner == msg.sender);
         require(!targetContract.invalidContract);
 
+        require(balances[msg.sender] >= targetContract.RTHB);
+
         // Burn RTHB
         balances[msg.sender] = balances[msg.sender].sub(targetContract.RTHB);
         _totalSupply = _totalSupply.sub(targetContract.RTHB);
@@ -160,12 +162,14 @@ contract BahtCoin is Owned {
         RTHBContract storage targetContract = contracts[_contractIndex];
         require(targetContract.owner != msg.sender);
         require(!targetContract.invalidContract);
-        require(balances[msg.sender] >= targetContract.RTHB);
-        require(targetContract.RBTC.mul(currentRate) <= targetContract.dropThreshold);
+        
+        uint256 requiredRTHB = targetContract.RBTC.mul(currentRate);
+        require(balances[msg.sender] >= requiredRTHB);
+        require(requiredRTHB <= targetContract.dropThreshold);
 
         // Burn RTHB
-        balances[msg.sender] = balances[msg.sender].sub(targetContract.RTHB);
-        _totalSupply = _totalSupply.sub(targetContract.RTHB);
+        balances[msg.sender] = balances[msg.sender].sub(requiredRTHB);
+        _totalSupply = _totalSupply.sub(requiredRTHB);
 
         // Set the takeover address
         targetContract.takeoverAddr = msg.sender;
