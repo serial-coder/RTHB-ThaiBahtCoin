@@ -57,7 +57,7 @@ contract BahtCoin is Owned {
 
     uint256 public collateralRate; 
     uint256 public thresholdRate;
-    uint256 public currentRate;
+    uint256 public currentRate;   // Current RBTC to RTHB rate
 
     event Transfer(address indexed from, address indexed to, uint tokens);
 
