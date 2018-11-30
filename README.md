@@ -15,7 +15,7 @@ Our RTHB is an ERC20-compatible token with extra following features.
 3. An owner of RTHB contract, who did the transaction (1), can switch back his/her fund to RBTC by way of invoking the function **claim()** along with the same amount of RTHB as specified in the contract.
 4. In case the RBTC price drops which makes RBTC price on a specific contract less than or equal to 130% of the collateralized RBTC, the contract is open for the public to take over. Thus, anyone can call to the function **publicTakeover()** together with the amount of RTHB calculated by the equation: RTHB >= targetContract.RBTC * currentRate, to take over the contract and take away the collateralized RBTC.
 
-## Example of issuinng RTHB
+## Example scenarios of RTHB
 ### Scenario 1 - RBTC price is stable
 
 ### Scenario 2 - RBTC price is increasing
