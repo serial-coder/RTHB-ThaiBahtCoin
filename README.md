@@ -13,7 +13,7 @@ Our RTHB is an ERC20-compatible token with extra following features.
 1. Anyone can invoke the function **issue()** along with the collateral RBTC and then get RTHB back. By default, the amount of RTHB would be issued as the proportion 1:1.5 (~66.67%) of the collateralized RBTC (this proportion is adjustable).
 2. RTHB holders can freely transfer any amount of RTHB to anyone.
 3. An owner of RTHB contract, who did the transaction (1), can switch back his/her fund to RBTC by way of invoking the function **claim()** along with the same amount of RTHB as specified in the contract.
-4. In case the RBTC price drops which makes RBTC price on a specific contract less than or equal to 130% of the collateralized RBTC, the contract is open for the public to take over. Thus, anyone can call to the function **publicTakeover()** together with the amount of RTHB calculated by the equation: RTHB >= contract.RBTC * currentRate, to take over the contract and take away the collateralized RBTC.
+4. In case the RBTC price drops which makes RBTC price on a specific contract less than or equal to 130% of the collateralized RBTC, the contract is open for the public to take over. Thus, anyone can call to the function **publicTakeover()** together with the amount of RTHB calculated by the equation: RTHB >= targetContract.RBTC * currentRate, to take over the contract and take away the collateralized RBTC.
 
 ## Example of issuinng RTHB
 ### Scenario 1 - Price is stable
