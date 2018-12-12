@@ -44,3 +44,9 @@ Our RTHB is an ERC20-compatible token with extra following features.
 
 ## To-do
 - Implement some missing ERC20 functions.
+
+## Featrues
+- Issueing new RTHB by providing RBTC (at 1.5:1 ratio).
+- Oracle price feeding.
+- Force sale for unhealthy contracts (below 1.3:1 ratio).
+- List of all contracts.
