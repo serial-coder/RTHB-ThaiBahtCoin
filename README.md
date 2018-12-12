@@ -27,6 +27,9 @@ Our RTHB is an ERC20-compatible token with extra following features.
 
 ### Scenario 2 - RBTC price is increasing
 
+<img width="500" src="images/RTHB-Scenario-Price-is-Increasing.png">
+- This scenario's just like first scenario, because RBTC price is up when alice decide to return RTHB back, so RTHB Smart Contract satisfy the rate and return her 1 RBTC back easily.
+
 ### Scenario 3 - RBTC price is decreasing
 
 ## To-do
