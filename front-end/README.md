@@ -1,0 +1,1 @@
+# stable-coin example on RSK chain front-end
