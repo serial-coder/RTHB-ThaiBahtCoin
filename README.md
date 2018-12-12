@@ -32,5 +32,15 @@ Our RTHB is an ERC20-compatible token with extra following features.
 
 ### Scenario 3 - RBTC price is decreasing
 
+<img width="500" src="images/RTHB-Scenario-Price-is-Decreasing.png">
+
+1) Alice send 1 RBTC at curret rate 1,500 THB/BTC to RTHB Smart Contract (calling **issue()**).
+2) Alice receive 1,000 RTHB back (at 1.5:1 ratio).
+- A monnth later price is droping to 1,200 THB/BTC, so RTHB Smart Contract force sale Alice contract (when ratio below 1.3:1).
+3) Bob claim alice contract by providing 1,200 (with some *discount) (calling **publicTakeover()**).
+4) Bob receive 1 RBTC back and alice lose her contract, but alice still had her 1,000 RTHB.
+
+*discount: System can offer some discount for intensive purpose, for example if rate is 1,200 THB/BTC system can offer sale at 1,190 THB/BTC.
+
 ## To-do
 - Implement some missing ERC20 functions.
