@@ -18,7 +18,7 @@ Our RTHB is an ERC20-compatible token with extra following features.
 ## Example scenarios of RTHB
 ### Scenario 1 - RBTC price is stable
 
-<img width="500" src="images/RTHB-Scenario-Price-Stable.png">
+<img width="500" src="images/RTHB-Scenario-Price-Stable2.png">
 
 ### Scenario 2 - RBTC price is increasing
 
