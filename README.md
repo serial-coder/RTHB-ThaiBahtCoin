@@ -23,7 +23,7 @@ Our RTHB is an ERC20-compatible token with extra following features.
 1) Alice send 1 RBTC at curret rate 1,500 THB/BTC to RTHB Smart Contract (calling **issue()**).
 2) Alice receive 1,000 RTHB back (at 1.5:1 ratio).
 3) Alice decide to return back 1,000 RTHB to get her RBTC back (calling **claim()**).
-4) Fortunately the rate's very stable, so the RTHB Smart Contract retur her 1 RBTC back.
+4) Fortunately the rate's very stable, so the RTHB Smart Contract return her 1 RBTC back normally.
 
 ### Scenario 2 - RBTC price is increasing
 
