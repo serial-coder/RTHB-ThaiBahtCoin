@@ -18,9 +18,38 @@ Our RTHB is an ERC20-compatible token with extra following features.
 ## Example scenarios of RTHB
 ### Scenario 1 - RBTC price is stable
 
+<img width="500" src="images/RTHB-Scenario-Price-Stable3.png">
+
+1) Alice sends 1 RBTC at a current rate 1,500 THB/BTC to RTHB Smart Contract (calling **issue()**).
+2) Alice receives 1,000 RTHB back (at 1.5 RBTC:1 RTHB ratio).
+3) Alice decides to return 1,000 RTHB to get her own RBTC back (calling **claim()**).
+4) Fortunately the rate is still the same as when the RBTC was deposited, so the RTHB Smart Contract would return 1 RBTC back to Alice.
+
 ### Scenario 2 - RBTC price is increasing
 
+<img width="500" src="images/RTHB-Scenario-Price-is-Increasing.png">
+
+- This scenario is similar to the first scenario. Since RBTC price is increasing, Alice is able to return 1,000 RTHB to get her own RBTC back at the rate 2,500 THB/BTC.
+
 ### Scenario 3 - RBTC price is decreasing
+
+<img width="500" src="images/RTHB-Scenario-Price-is-Decreasing.png">
+
+1) Alice sends 1 RBTC at a current rate 1,500 THB/BTC to RTHB Smart Contract (calling **issue()**).
+2) Alice receives 1,000 RTHB back (at 1.5 RBTC:1 RTHB ratio).
+
+- A month later, RBTC price is dropping to 1,200 THB/BTC. Thus, RTHB Smart Contract forces sell of Alice contract in question (when the rate ratio is lower than 1.3 RBTC:1 RTHB).
+
+3) Bob takes over Alice contract by providing 1,200 RTHB (with some discount*) (calling **publicTakeover()**).
+4) Bob takes away 1 RBTC and Alice loses her contract. However, Alice still holds 1,000 RTHB.
+
+discount*: the system can offer some discount for incentive purpose. For instance, when a rate is 1,200 THB/BTC, the system can offer a sale at 1,190 THB/BTC.
+
+## Features
+- Issuing new RTHB by providing RBTC (at 1.5 RBTC:1 RTHB ratio).
+- Oracle price feeding.
+- Force sell for unhealthy contracts (below 1.3 RBTC:1 RTHB ratio).
+- List of all contracts.
 
 ## To-do
 - Implement some missing ERC20 functions.
